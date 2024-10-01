@@ -127,7 +127,6 @@ int My_nums::CompareNumbers(const std::vector<unsigned char>& num1, const std::v
     size_t size1 = num1.size();
     size_t size2 = num2.size();
 
-    // Удаляем ведущие нули из обоих чисел (старшие разряды)
     while (size1 > 1 && num1[size1 - 1] == 0) {
         --size1;
     }
