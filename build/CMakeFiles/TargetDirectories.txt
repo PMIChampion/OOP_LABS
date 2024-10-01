@@ -1,0 +1,4 @@
+/Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build/CMakeFiles/My_nums_lib.dir
+/Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build/CMakeFiles/My_nums_exe.dir
+/Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build/CMakeFiles/edit_cache.dir
+/Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build/CMakeFiles/rebuild_cache.dir
