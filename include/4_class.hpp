@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 
-class My_nums {
+class QuaternaryNumber {
 private:
     std::vector<unsigned char> my_num;
     void ReverseNumber();
@@ -11,20 +11,20 @@ private:
     static void RemoveLeadingZeros(std::vector<unsigned char>& num); 
 public:
     // Конструкторы
-    My_nums();
-    My_nums(std::vector<unsigned char> input_num);
-    My_nums(const My_nums& other);
+    QuaternaryNumber();
+    QuaternaryNumber(std::vector<unsigned char> input_num);
+    QuaternaryNumber(const QuaternaryNumber& other);
 
     // Методы
     std::vector<unsigned char> Get_numbers() const;
     void Print_numbers() const;
 
     // Операторы
-    My_nums operator+(const My_nums& second_num) const;
-    My_nums operator-(const My_nums& second_num) const;
-    My_nums& operator=(const My_nums& second);
-    bool operator==(const My_nums& second_num) const;
-    bool operator>(const My_nums& second_num) const;
-    bool operator<(const My_nums& second_num) const;
+    QuaternaryNumber operator+(const QuaternaryNumber& second_num) const;
+    QuaternaryNumber operator-(const QuaternaryNumber& second_num) const;
+    QuaternaryNumber& operator=(const QuaternaryNumber& second);
+    bool operator==(const QuaternaryNumber& second_num) const;
+    bool operator>(const QuaternaryNumber& second_num) const;
+    bool operator<(const QuaternaryNumber& second_num) const;
 };
 

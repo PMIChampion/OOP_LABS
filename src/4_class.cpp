@@ -1,11 +1,8 @@
 #include "4_class.hpp"  
-#include <iostream>
-#include <vector>
 
+QuaternaryNumber::QuaternaryNumber() {}
 
-My_nums::My_nums() {}
-
-My_nums::My_nums(std::vector<unsigned char> input_num) {
+QuaternaryNumber::QuaternaryNumber(std::vector<unsigned char> input_num) {
     for (int i = (input_num.size() - 1); i >= 0; --i) {
         if (0 <= (input_num[i]) && (input_num[i]) <= 3) {
             my_num.push_back(input_num[i]);
@@ -15,13 +12,13 @@ My_nums::My_nums(std::vector<unsigned char> input_num) {
     }
 }
 
-My_nums::My_nums(const My_nums& other) : my_num(other.my_num) {}
+QuaternaryNumber::QuaternaryNumber(const QuaternaryNumber& other) : my_num(other.my_num) {}
 
-std::vector<unsigned char> My_nums::Get_numbers() const {
+std::vector<unsigned char> QuaternaryNumber::Get_numbers() const {
     return my_num;
 }
 
-void My_nums::Print_numbers() const {
+void QuaternaryNumber::Print_numbers() const {
     for (int i = (my_num.size() - 1); i > -1; --i) {
         std::cout << static_cast<int>(my_num[i]);
     }
@@ -31,7 +28,7 @@ void My_nums::Print_numbers() const {
 
 
 
-My_nums My_nums::operator+(const My_nums& second_num) const {
+QuaternaryNumber QuaternaryNumber::operator+(const QuaternaryNumber& second_num) const {
     std::vector<unsigned char> result;
     size_t max_size = std::max(my_num.size(), second_num.my_num.size());
     unsigned char carry = 0;
@@ -58,12 +55,12 @@ My_nums My_nums::operator+(const My_nums& second_num) const {
         result.push_back(carry);
     }
     std::reverse(result.begin(), result.end());
-    return My_nums(result);
+    return QuaternaryNumber(result);
 }
 
 // ГРАНИЦА 2 ==============================================================
 
-My_nums My_nums::operator-(const My_nums& second_num) const {
+QuaternaryNumber QuaternaryNumber::operator-(const QuaternaryNumber& second_num) const {
     if (CompareNumbers(my_num, second_num.my_num) == -1){
         throw std::invalid_argument("Нельзя из меньшего вычесть большее");
     }
@@ -94,36 +91,36 @@ My_nums My_nums::operator-(const My_nums& second_num) const {
     }
     RemoveLeadingZeros(result);
     std::reverse(result.begin(), result.end());
-    return My_nums(result);
+    return QuaternaryNumber(result);
 }
 
 
 
 // =========================== Рабочие методы для всяких штук, реализованы корректно ===========
-My_nums& My_nums::operator=(const My_nums& second) {
+QuaternaryNumber& QuaternaryNumber::operator=(const QuaternaryNumber& second) {
     if (this != &second) {
         my_num = second.my_num;
     }
     return *this;
 }
 
-bool My_nums::operator==(const My_nums& second_num) const {
+bool QuaternaryNumber::operator==(const QuaternaryNumber& second_num) const {
     return CompareNumbers(my_num, second_num.my_num) == 0;
 }
 
-bool My_nums::operator>(const My_nums& second_num) const {
+bool QuaternaryNumber::operator>(const QuaternaryNumber& second_num) const {
     return CompareNumbers(my_num, second_num.my_num) == 1;
 }
 
-bool My_nums::operator<(const My_nums& second_num) const {
+bool QuaternaryNumber::operator<(const QuaternaryNumber& second_num) const {
     return CompareNumbers(my_num, second_num.my_num) == -1;
 }
 
-void My_nums::ReverseNumber() {
+void QuaternaryNumber::ReverseNumber() {
     std::reverse(my_num.begin(), my_num.end());
 }
 
-int My_nums::CompareNumbers(const std::vector<unsigned char>& num1, const std::vector<unsigned char>& num2) {
+int QuaternaryNumber::CompareNumbers(const std::vector<unsigned char>& num1, const std::vector<unsigned char>& num2) {
     size_t size1 = num1.size();
     size_t size2 = num2.size();
 
@@ -151,7 +148,7 @@ int My_nums::CompareNumbers(const std::vector<unsigned char>& num1, const std::v
     return 0;
 }
 
-void My_nums::RemoveLeadingZeros(std::vector<unsigned char>& num) {
+void QuaternaryNumber::RemoveLeadingZeros(std::vector<unsigned char>& num) {
     while (num.size() > 1 && num.back() == 0) {
         num.pop_back(); 
     }
