@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS
+CMAKE_SOURCE_DIR = /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build
+CMAKE_BINARY_DIR = /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/My_nums_lib.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/My_nums_lib.dir/progress.make
 include CMakeFiles/My_nums_lib.dir/flags.make
 
 CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o: CMakeFiles/My_nums_lib.dir/flags.make
-CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o: /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/src/4_class.cpp
+CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o: /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/src/4_class.cpp
 CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o: CMakeFiles/My_nums_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o -MF CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o.d -o CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o -c /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/src/4_class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o -MF CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o.d -o CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o -c /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/src/4_class.cpp
 
 CMakeFiles/My_nums_lib.dir/src/4_class.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/My_nums_lib.dir/src/4_class.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/src/4_class.cpp > CMakeFiles/My_nums_lib.dir/src/4_class.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/src/4_class.cpp > CMakeFiles/My_nums_lib.dir/src/4_class.cpp.i
 
 CMakeFiles/My_nums_lib.dir/src/4_class.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/My_nums_lib.dir/src/4_class.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/src/4_class.cpp -o CMakeFiles/My_nums_lib.dir/src/4_class.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/src/4_class.cpp -o CMakeFiles/My_nums_lib.dir/src/4_class.cpp.s
 
 # Object files for target My_nums_lib
 My_nums_lib_OBJECTS = \
@@ -93,7 +93,7 @@ My_nums_lib_EXTERNAL_OBJECTS =
 libMy_nums_lib.a: CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o
 libMy_nums_lib.a: CMakeFiles/My_nums_lib.dir/build.make
 libMy_nums_lib.a: CMakeFiles/My_nums_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMy_nums_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMy_nums_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/My_nums_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/My_nums_lib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/My_nums_lib.dir/clean:
 .PHONY : CMakeFiles/My_nums_lib.dir/clean
 
 CMakeFiles/My_nums_lib.dir/depend:
-	cd /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/build/CMakeFiles/My_nums_lib.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/build /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/build /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/build/CMakeFiles/My_nums_lib.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/My_nums_lib.dir/depend
 

@@ -1,6 +1,6 @@
 CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o: \
-  /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/src/4_class.cpp \
-  /Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/include/4_class.hpp \
+  /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/src/4_class.cpp \
+  /Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/include/4_class.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \

@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/vladislavburdinskij/Documents/OOP_Labs_2/OOP_LABS/include
+CXX_INCLUDES = -I/Users/vladislavburdinskij/Documents/Lab-2/OOP_LABS/include
 
 CXX_FLAGSarm64 = -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
 
