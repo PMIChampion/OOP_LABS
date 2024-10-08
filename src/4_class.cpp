@@ -14,6 +14,10 @@ QuaternaryNumber::QuaternaryNumber(std::vector<unsigned char> input_num) {
 
 QuaternaryNumber::QuaternaryNumber(const QuaternaryNumber& other) : my_num(other.my_num) {}
 
+QuaternaryNumber::QuaternaryNumber(QuaternaryNumber&& other) noexcept : my_num(std::move(other.my_num)) {
+    other.my_num.clear();
+}
+
 std::vector<unsigned char> QuaternaryNumber::Get_numbers() const {
     return my_num;
 }
@@ -104,6 +108,15 @@ QuaternaryNumber& QuaternaryNumber::operator=(const QuaternaryNumber& second) {
     return *this;
 }
 
+QuaternaryNumber& QuaternaryNumber::operator=(QuaternaryNumber&& second) noexcept {
+    if (this != &second) {
+        my_num = std::move(second.my_num);
+        // Очистим объект second
+        second.my_num.clear();
+    }
+    return *this;
+}
+
 bool QuaternaryNumber::operator==(const QuaternaryNumber& second_num) const {
     return CompareNumbers(my_num, second_num.my_num) == 0;
 }
@@ -114,6 +127,14 @@ bool QuaternaryNumber::operator>(const QuaternaryNumber& second_num) const {
 
 bool QuaternaryNumber::operator<(const QuaternaryNumber& second_num) const {
     return CompareNumbers(my_num, second_num.my_num) == -1;
+}
+
+bool QuaternaryNumber::operator<=(const QuaternaryNumber& second_num) const {
+    return !(*this > second_num);
+}
+
+bool QuaternaryNumber::operator>=(const QuaternaryNumber& second_num) const {
+    return !(*this < second_num);
 }
 
 void QuaternaryNumber::ReverseNumber() {

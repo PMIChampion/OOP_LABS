@@ -14,6 +14,7 @@ public:
     QuaternaryNumber();
     QuaternaryNumber(std::vector<unsigned char> input_num);
     QuaternaryNumber(const QuaternaryNumber& other);
+    QuaternaryNumber(QuaternaryNumber&& other) noexcept; // Конструктор перемещения
 
     // Методы
     std::vector<unsigned char> Get_numbers() const;
@@ -23,8 +24,11 @@ public:
     QuaternaryNumber operator+(const QuaternaryNumber& second_num) const;
     QuaternaryNumber operator-(const QuaternaryNumber& second_num) const;
     QuaternaryNumber& operator=(const QuaternaryNumber& second);
+    QuaternaryNumber& operator=(QuaternaryNumber&& second) noexcept; // Оператор перемещения
     bool operator==(const QuaternaryNumber& second_num) const;
     bool operator>(const QuaternaryNumber& second_num) const;
     bool operator<(const QuaternaryNumber& second_num) const;
+    bool operator<=(const QuaternaryNumber& second_num) const; // Оператор <=
+    bool operator>=(const QuaternaryNumber& second_num) const; // Оператор >=
 };
 
