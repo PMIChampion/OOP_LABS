@@ -1,5 +1,3 @@
-// custom_memory_resource.h
-
 #ifndef CUSTOM_MEMORY_RESOURCE_H
 #define CUSTOM_MEMORY_RESOURCE_H
 
