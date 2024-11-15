@@ -1,5 +1,3 @@
-// my_struct.cpp
-
 #include "my_struct.h"
 
 MyStruct::MyStruct(int a_, double b_, const std::string& c_)
