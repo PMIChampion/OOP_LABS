@@ -1,5 +1,3 @@
-// pmr_list.cpp
-
 #include "pmr_list.h"
 
 template <typename T>
