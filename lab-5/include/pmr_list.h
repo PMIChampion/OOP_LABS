@@ -1,5 +1,3 @@
-// pmr_list.h
-
 #ifndef PMR_LIST_H
 #define PMR_LIST_H
 
