@@ -1,5 +1,3 @@
-// custom_memory_resource.cpp
-
 #include "custom_memory_resource.h"
 #include <new>
 #include <iostream>
