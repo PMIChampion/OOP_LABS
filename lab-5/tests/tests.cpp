@@ -1,11 +1,8 @@
-// tests.cpp
-
 #include <gtest/gtest.h>
 #include "custom_memory_resource.h"
 #include "pmr_list.h"
 #include "my_struct.h"
 
-// Тестирование работы PMRList с int
 TEST(PMRListTest, IntPushBack) {
     CustomMemoryResource my_resource;
     std::pmr::polymorphic_allocator<std::byte> alloc(&my_resource);
@@ -44,7 +41,6 @@ TEST(PMRListTest, IntPushFront) {
     ASSERT_EQ(it, int_list.end());
 }
 
-// Тестирование работы PMRList с MyStruct
 TEST(PMRListTest, MyStructTest) {
     CustomMemoryResource my_resource;
     std::pmr::polymorphic_allocator<std::byte> alloc(&my_resource);
@@ -74,7 +70,6 @@ TEST(PMRListTest, MyStructTest) {
     ASSERT_EQ(it, struct_list.end());
 }
 
-// Тестирование двунаправленного итератора
 TEST(PMRListTest, BidirectionalIterator) {
     CustomMemoryResource my_resource;
     std::pmr::polymorphic_allocator<std::byte> alloc(&my_resource);
@@ -84,7 +79,6 @@ TEST(PMRListTest, BidirectionalIterator) {
     int_list.push_back(2);
     int_list.push_back(3);
 
-    // Обратный обход
     PMRList<int>::Iterator it = int_list.rbegin();
     ASSERT_EQ(*it, 3);
     --it;
@@ -95,7 +89,6 @@ TEST(PMRListTest, BidirectionalIterator) {
     ASSERT_EQ(it, int_list.rend());
 }
 
-// Тестирование работы с пустым списком
 TEST(PMRListTest, EmptyList) {
     CustomMemoryResource my_resource;
     std::pmr::polymorphic_allocator<std::byte> alloc(&my_resource);
