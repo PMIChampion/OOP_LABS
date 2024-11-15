@@ -1,5 +1,3 @@
-// main.cpp
-
 #include <iostream>
 #include "custom_memory_resource.h"
 #include "pmr_list.h"
@@ -8,10 +6,8 @@
 int main() {
     CustomMemoryResource my_resource;
 
-    // Создаем полиморфный аллокатор с использованием нашего кастомного memory_resource
     std::pmr::polymorphic_allocator<std::byte> alloc(&my_resource);
 
-    // PMRList<int>
     PMRList<int> int_list(alloc);
 
     int_list.push_back(1);
@@ -28,7 +24,6 @@ int main() {
         std::cout << *it << "\n";
     }
 
-    // PMRList<MyStruct>
     PMRList<MyStruct> struct_list(alloc);
 
     struct_list.push_back(MyStruct(1, 2.0, "hello"));
