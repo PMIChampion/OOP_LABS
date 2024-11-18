@@ -3,7 +3,7 @@
 
 #include <memory_resource>
 #include <memory>
-#include "my_struct.h" 
+#include "my_struct.h"
 
 template <typename T>
 class PMRList {
@@ -16,6 +16,7 @@ public:
     void push_back(const T& value);
     void push_front(const T& value);
 
+protected: // Node and related private methods moved to protected
     struct Node {
         T value;
         Node* next;
@@ -24,6 +25,13 @@ public:
         Node(const T& val, Node* n = nullptr, Node* p = nullptr);
     };
 
+    Node* head_;
+    Node* tail_;
+    allocator_type alloc_;
+    using NodeAllocator = typename std::allocator_traits<allocator_type>::template rebind_alloc<Node>;
+    NodeAllocator node_alloc_;
+
+private:
     class Iterator {
     public:
         using iterator_category = std::bidirectional_iterator_tag;
@@ -38,11 +46,11 @@ public:
         reference operator*() const;
         pointer operator->() const;
 
-        Iterator& operator++();   
-        Iterator operator++(int); 
+        Iterator& operator++();
+        Iterator operator++(int);
 
-        Iterator& operator--();   
-        Iterator operator--(int); 
+        Iterator& operator--();
+        Iterator operator--(int);
 
         bool operator==(const Iterator& other) const;
         bool operator!=(const Iterator& other) const;
@@ -51,17 +59,11 @@ public:
         Node* node_;
     };
 
+public:
     Iterator begin();
     Iterator end();
     Iterator rbegin();
     Iterator rend();
-
-private:
-    Node* head_;
-    Node* tail_;
-    allocator_type alloc_;
-    using NodeAllocator = typename std::allocator_traits<allocator_type>::template rebind_alloc<Node>;
-    NodeAllocator node_alloc_;
 };
 
 extern template class PMRList<int>;
