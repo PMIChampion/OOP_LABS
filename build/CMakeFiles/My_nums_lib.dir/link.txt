@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libMy_nums_lib.a CMakeFiles/My_nums_lib.dir/src/4_class.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libMy_nums_lib.a
