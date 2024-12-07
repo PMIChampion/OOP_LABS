@@ -1,5 +1,0 @@
-if(EXISTS "/Users/vladislavburdinskij/Documents/OOP_labs/OOP_LABS/lab-6/build/runTests[1]_tests.cmake")
-  include("/Users/vladislavburdinskij/Documents/OOP_labs/OOP_LABS/lab-6/build/runTests[1]_tests.cmake")
-else()
-  add_test(runTests_NOT_BUILT runTests_NOT_BUILT)
-endif()
